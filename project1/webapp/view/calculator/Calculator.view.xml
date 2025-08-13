@@ -12,7 +12,6 @@
         id="calculator"
         showHeader="false"
         class="sapUiContentPadding"
-
     >
         <grid:CSSGrid
             id="grid3"
@@ -24,13 +23,11 @@
                 src="https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg"
             />
 
-       
-
-                   <FlexBox
-            alignItems="Center"
-            justifyContent="Center"
-            fitContainer="true"
-        >
+            <FlexBox
+                alignItems="Center"
+                justifyContent="Center"
+                fitContainer="true"
+            >
                 <f:Card class="sapUiMediumMargin  bigTile">
                     <f:header>
                         <card:Header
@@ -44,33 +41,27 @@
                             <Label
                                 id="number-a"
                                 text="Number 1"
-                                        class="sapUiSmallMarginBeginEnd"
-
+                                class="sapUiSmallMarginBeginEnd"
                                 labelFor="number1"
                             />
                             <Input
                                 id="number1"
-                        
-                                        class="sapUiSmallMarginBeginEnd"
-
+                                class="sapUiSmallMarginBeginEnd"
                                 placeholder="Enter first number "
                             />
 
                             <Label
                                 id="number-b"
                                 text="Number 2"
-                                        class="sapUiSmallMarginBeginEnd"
-
+                                class="sapUiSmallMarginBeginEnd"
                                 labelFor="number1"
                             />
                             <Input
                                 id="number2"
-                                        class="sapUiSmallMarginBeginEnd"
-
+                                class="sapUiSmallMarginBeginEnd"
                                 placeholder="Enter second number "
                             />
-                            <HBox         class="sapUiSmallMarginBeginEnd"
->
+                            <HBox class="sapUiSmallMarginBeginEnd">
                                 <Button
                                     id="add"
                                     text="Add"
@@ -94,8 +85,7 @@
                             </HBox>
 
                             <Input
-                                    class="sapUiSmallMarginBeginEnd"
-
+                                class="sapUiSmallMarginBeginEnd"
                                 id="resultInput"
                                 type="Number"
                                 placeholder="The result of the operation  "
@@ -103,8 +93,7 @@
                         </VBox>
                     </f:content>
                 </f:Card>
-                        </FlexBox>
-
+            </FlexBox>
         </grid:CSSGrid>
     </Page>
 </mvc:View>

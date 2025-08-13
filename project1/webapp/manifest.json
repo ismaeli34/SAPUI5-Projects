@@ -82,15 +82,30 @@
           "pattern": "",
           "target": ["tilesTarget"]
         },
-         {
+        {
           "name": "countdownRoute",
           "pattern": "countdown",
           "target": ["countdownTarget"]
         },
-           {
+        {
           "name": "calculatorRoute",
           "pattern": "calculator",
           "target": ["calculatorTarget"]
+        },
+        {
+          "name": "covidRoute",
+          "pattern": "covid",
+          "target": ["covidTarget"]
+        },
+         {
+          "name": "covidListRoute",
+          "pattern": "covid-list",
+          "target": ["covidListTarget"]
+        },
+          {
+          "name": "covidPieChartRoute",
+          "pattern": "covid-pie-chart",
+          "target": ["covidPieChartTarget"]
         }
       ],
       "targets": {
@@ -100,18 +115,35 @@
           "viewName": "Tiles",
           "viewType": "XML"
         },
-          "countdownTarget": {
+        "countdownTarget": {
           "viewId": "countdown",
           "id": "countdown",
           "viewName": "countdown.Countdown",
           "viewType": "XML"
         },
-        "calculatorTarget":{
+        "calculatorTarget": {
           "viewId": "calculator",
           "id": "calculator",
           "viewName": "calculator.Calculator",
           "viewType": "XML"
-
+        },
+        "covidTarget": {
+          "viewId": "covid",
+          "id": "covid",
+          "viewName": "covid.Covid",
+          "viewType": "XML"
+        },
+         "covidListTarget": {
+          "viewId": "CovidList",
+          "id": "covid.CovidList",
+          "viewName": "covid.CovidList",
+          "viewType": "XML"
+        },
+            "covidPieChartTarget": {
+          "viewId": "CovidPieChart",
+          "id": "covid.CovidPieChart",
+          "viewName": "covid.CovidPieChart",
+          "viewType": "XML"
         }
       }
     },

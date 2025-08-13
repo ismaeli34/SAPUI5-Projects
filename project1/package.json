@@ -9,6 +9,7 @@
   ],
   "main": "webapp/index.html",
   "dependencies": {
+    "generator-easy-ui5": "^2.4.5",
     "to": "^0.2.9",
     "update": "^0.7.4"
   },

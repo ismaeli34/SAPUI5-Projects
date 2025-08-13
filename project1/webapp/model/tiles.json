@@ -6,5 +6,9 @@
      {
         "title": "Calculator Project",
         "route": "calculatorRoute"
+    },
+    {
+        "title":"Covid 19",
+        "route":"covidRoute"
     }
 ]

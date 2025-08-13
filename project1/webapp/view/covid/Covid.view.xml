@@ -1,0 +1,87 @@
+<mvc:View
+    controllerName="com.te.project1.controller.covid.Covid"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:core="sap.ui.core"
+    xmlns:viz.data="sap.viz.ui5.data"
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:f="sap.f"
+    xmlns:card="sap.f.cards"
+    xmlns="sap.m"
+>
+    <Page
+        id="covid"
+        showHeader="false"
+        class="sapUiContentPadding"
+    >
+        <Panel
+            id='settingsPanel'
+            class="panelStyle"
+            expandable="true"
+            expanded="true"
+            headerText="Data"
+            width="auto"
+        >
+            <content>
+                <Button
+                    id="latest_coun_list"
+                    ariaDescribedBy="defaultButtonDescription "
+                    text="Latest Count by List"
+                    press="onPressList"
+                />
+                <Button
+                    id="latest_count_graph"
+                    type="Accept"
+                    text="Latest Count by Graph"
+                    ariaDescribedBy="defaultButtonDescription"
+                    press="onPressGraph"
+                />
+            </content>
+        </Panel>
+
+        <viz:VizFrame
+            id="idVizFrame"
+            uiConfig="{applicationSet:'fiori'}"
+            height='100%'
+            width="100%"
+            vizType='line'
+        >
+            <viz:dataset>
+                <viz.data:FlattenedDataset data="{/data}">
+                    <viz.data:dimensions>
+                        <viz.data:DimensionDefinition
+                            name="day"
+                            value="{day}"
+                        />
+                    </viz.data:dimensions>
+                    <viz.data:measures>
+                        <viz.data:MeasureDefinition
+                            name="total"
+                            value="{summary/total}"
+                        />
+                    </viz.data:measures>
+                </viz.data:FlattenedDataset>
+            </viz:dataset>
+
+            <viz:feeds>
+                <viz.feeds:FeedItem
+                    id='valueAxisFeed'
+                    uid="valueAxis"
+                    type="Measure"
+                    values="total"
+                />
+                <viz.feeds:FeedItem
+                    id='categoryAxisFeed'
+                    uid="categoryAxis"
+                    type="Dimension"
+                    values="day"
+                />
+            </viz:feeds>
+            <viz:dependents>
+                <viz:Popover id="idPopOver" />
+            </viz:dependents>
+        </viz:VizFrame>
+    </Page>
+</mvc:View>
