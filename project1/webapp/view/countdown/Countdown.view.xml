@@ -1,0 +1,90 @@
+<mvc:View
+    controllerName="com.te.project1.controller.countdown.Countdown"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+>
+    <Page
+        id="countdown1"
+        showHeader="false"
+    >
+        <grid:CSSGrid
+            id="grid1"
+            gridTemplateColumns="1fr"
+            gridGap="1rem"
+        >
+            <Image
+                id="image1"
+                src="https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg"
+            />
+
+            <grid:CSSGrid
+                id="grid2"
+                gridTemplateColumns="1fr 1fr 1fr 1fr"
+                gridGap="0"
+                 style="justify-content: center;"
+            >
+                <GenericTile
+                    class="  tileLayout"
+                    header="Days"
+                    valueColor="Critical"
+                    press="press"
+                >
+                    <TileContent>
+                        <NumericContent
+                            valueColor="Critical"
+                            value="{timer>/days}"
+                            withMargin="false"
+                        />
+                    </TileContent>
+                </GenericTile>
+
+                <GenericTile
+                    class="  tileLayout"
+                    header="Hours"
+                    valueColor="Error"
+                    press="press"
+                >
+                    <TileContent>
+                        <NumericContent
+                            valueColor="Error"
+                            value="{timer>/hours}"
+                            withMargin="false"
+                        />
+                    </TileContent>
+                </GenericTile>
+                <GenericTile
+                    class="  tileLayout"
+                    header="Minutes"
+                    valueColor="Good"
+                    press="press"
+                >
+                    <TileContent>
+                        <NumericContent
+                            valueColor="Good"
+                            value="{timer>/minutes}"
+                            withMargin="false"
+                        />
+                    </TileContent>
+                </GenericTile>
+
+                <GenericTile
+                    class="  tileLayout"
+                    header="Seconds"
+                    valueColor="Neutral"
+                    press="press"
+                >
+                    <TileContent>
+                        <NumericContent
+                            valueColor="Neutral"
+                            value="{timer>/seconds}"
+                            withMargin="false"
+                        />
+                    </TileContent>
+                </GenericTile>
+            </grid:CSSGrid>
+        </grid:CSSGrid>
+    </Page>
+</mvc:View>

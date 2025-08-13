@@ -1,0 +1,6 @@
+/* Enter your custom styles here */
+
+.bigTile {
+    width: 500px !important;   /* Increase width */
+    height: 300px !important;  /* Increase height */
+}

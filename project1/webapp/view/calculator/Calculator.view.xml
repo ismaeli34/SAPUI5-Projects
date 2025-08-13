@@ -1,0 +1,110 @@
+<mvc:View
+    controllerName="com.te.project1.controller.calculator.Calculator"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.f"
+    xmlns:card="sap.f.cards"
+    xmlns="sap.m"
+>
+    <Page
+        id="calculator"
+        showHeader="false"
+        class="sapUiContentPadding"
+
+    >
+        <grid:CSSGrid
+            id="grid3"
+            gridTemplateColumns="1fr"
+            gridGap="1rem"
+        >
+            <Image
+                id="image2"
+                src="https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg"
+            />
+
+       
+
+                   <FlexBox
+            alignItems="Center"
+            justifyContent="Center"
+            fitContainer="true"
+        >
+                <f:Card class="sapUiMediumMargin  bigTile">
+                    <f:header>
+                        <card:Header
+                            title="Calculator"
+                            subtitle=""
+                            iconSrc="sap-icon://simulate"
+                        />
+                    </f:header>
+                    <f:content>
+                        <VBox width="100%">
+                            <Label
+                                id="number-a"
+                                text="Number 1"
+                                        class="sapUiSmallMarginBeginEnd"
+
+                                labelFor="number1"
+                            />
+                            <Input
+                                id="number1"
+                        
+                                        class="sapUiSmallMarginBeginEnd"
+
+                                placeholder="Enter first number "
+                            />
+
+                            <Label
+                                id="number-b"
+                                text="Number 2"
+                                        class="sapUiSmallMarginBeginEnd"
+
+                                labelFor="number1"
+                            />
+                            <Input
+                                id="number2"
+                                        class="sapUiSmallMarginBeginEnd"
+
+                                placeholder="Enter second number "
+                            />
+                            <HBox         class="sapUiSmallMarginBeginEnd"
+>
+                                <Button
+                                    id="add"
+                                    text="Add"
+                                    press="onAdd"
+                                />
+                                <Button
+                                    id="subtract"
+                                    text="Subtract"
+                                    press="onSubtract"
+                                />
+                                <Button
+                                    id="multiply"
+                                    text="Multiply"
+                                    press="onMultiply"
+                                />
+                                <Button
+                                    id="divide"
+                                    text="Divide"
+                                    press="onDivide"
+                                />
+                            </HBox>
+
+                            <Input
+                                    class="sapUiSmallMarginBeginEnd"
+
+                                id="resultInput"
+                                type="Number"
+                                placeholder="The result of the operation  "
+                            />
+                        </VBox>
+                    </f:content>
+                </f:Card>
+                        </FlexBox>
+
+        </grid:CSSGrid>
+    </Page>
+</mvc:View>

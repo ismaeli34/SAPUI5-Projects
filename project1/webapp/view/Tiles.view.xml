@@ -1,0 +1,37 @@
+<mvc:View
+    controllerName="com.te.project1.controller.Tiles"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns="sap.m"
+>
+    <Page
+        id="tiles"
+        showHeader="false"
+    >
+    
+        <l:VerticalLayout
+            id="vertical_layout"
+            class="sapUiContentPadding"
+        >
+            <l:HorizontalLayout
+                id="horizontal"
+                content="{tiles>/}"
+                allowWrapping="true"
+                class="sapUiContentPadding"
+            >
+                <GenericTile
+                id="generic_tile"
+                    class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                    header="{tiles>title}"
+                    subheader=""
+                    press=".onTilePress"
+                    frameType="TwoByHalf"
+                >
+                   
+                </GenericTile>
+
+
+            </l:HorizontalLayout>
+        </l:VerticalLayout>
+    </Page>
+</mvc:View>
